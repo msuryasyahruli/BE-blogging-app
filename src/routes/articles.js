@@ -3,7 +3,7 @@ const articleController = require("../controller/articles");
 const router = express.Router();
 
 router
-  .get("/", articleController.getArticleByBlog)
+  .get("/user/:id_user", articleController.getArticleByBlog)
   .get("/:id", articleController.getDetailArticle)
   .post("/", articleController.createArticle)
   .put("/:id", articleController.updateArticle)

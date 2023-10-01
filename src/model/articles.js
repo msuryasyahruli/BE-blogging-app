@@ -1,7 +1,7 @@
 const Pool = require("../config/db");
 
-const selectArticleByBlog = () => {
-  return Pool.query(`SELECT * FROM articles`);
+const selectArticleByBlog = (id_user) => {
+  return Pool.query(`SELECT * FROM articles WHERE user_id='${id_user}'`);
 };
 
 const selectDetailArticle = (id_article) => {

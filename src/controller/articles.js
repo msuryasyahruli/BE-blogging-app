@@ -11,9 +11,9 @@ const { v4: uuidv4 } = require("uuid");
 
 const articleController = {
   getArticleByBlog: async (req, res) => {
-    // const blog_id = String(req.params.blog_id);
+    const id_user = String(req.params.id_user);
     try {
-      const result = await selectArticleByBlog();
+      const result = await selectArticleByBlog(id_user);
       commonHelper.response(res, result.rows, 200, "get data success");
     } catch (error) {
       console.log(error);
