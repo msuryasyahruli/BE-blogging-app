@@ -1,4 +1,4 @@
-const { createUser, findEmail } = require("../model/users");
+const { createUser, findEmail, selectDetailProfile, findId } = require("../model/users");
 const bcrypt = require("bcryptjs");
 const { v4: uuidv4 } = require("uuid");
 const jwt = require("jsonwebtoken");
@@ -80,6 +80,24 @@ const usersController = {
       refreshToken: authHelper.refreshToken(payload),
     };
     commonHelper.response(res, result, 200, "Token has refreshed");
+  },
+
+  getDetailProfile: async (req, res) => {
+    const id_user = String(req.params.id);
+    const { rowCount } = await findId(id_user);
+    if (!rowCount) {
+      return res.json({ message: "ID Not Found" });
+    }
+    selectDetailProfile(id_user)
+      .then((result) => {
+        commonHelper.response(
+          res,
+          result.rows,
+          200,
+          "get data success from database"
+        );
+      })
+      .catch((err) => res.send(err));
   },
 };
 
