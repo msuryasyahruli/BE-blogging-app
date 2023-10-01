@@ -1,7 +1,7 @@
 
 # Blogging Platform
 
-This is a simple blogging website for creating articles. Here you can create articles, view, edit and delete articles that have been created.
+This is a simple blogging website for creating articles. Here you can create, view, edit and delete articles that have been created.
 
 
 ## Acknowledgements
