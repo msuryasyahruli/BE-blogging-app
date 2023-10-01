@@ -1,3 +1,38 @@
+
+# Blogging Platform
+
+This is a simple blogging website for creating articles. Here you can create articles, view, edit and delete articles that have been created.
+
+
+## Acknowledgements
+
+ - [Backend](https://github.com/msuryasyahruli/BE-blogging-app.git)
+ - [Frontend](https://github.com/msuryasyahruli/FE-blogging-app.git)
+
+
+
+## Environment Variables
+
+To run this project, you will need to add the following environment variables to your .env file
+
+`PGUSER`
+`PGHOST`
+`PGDATABASE`
+`PGPASSWORD`
+`PGPORT`
+`PORT`
+`SECRETE_KEY_JWT`
+
+
+## Installation
+
+Install my-project with npm
+
+```bash
+  npm install my-project
+  cd my-project
+```
+    
 | Thrid Party   | npm install       |
 | ------------- | ----------------- |
 | [Express]     | npm i express     |
